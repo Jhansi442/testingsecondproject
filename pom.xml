@@ -39,10 +39,10 @@
 				<extensions>true</extensions>
 				<executions>
                                  <execution>
-                                  <id>deploy-to-exchange</id>
+                                  <id>exchange-deploy</id>
                                   <phase>deploy</phase>
                                   <goals>
-                                 <goal>deploy-to-exchange</goal>
+                                 <goal>exchange-deploy</goal>
                                 </goals>
 				 </execution>
 				</executions>
