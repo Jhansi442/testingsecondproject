@@ -37,7 +37,7 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<executions>
+<!-- 				<executions>
                                  <execution>
                                   <id>exchange-deploy</id>
                                   <phase>deploy</phase>
@@ -45,7 +45,7 @@
                                  <goal>exchange-deploy</goal>
                                 </goals>
 				 </execution>
-				</executions>
+				</executions> -->
 				<configuration>
 				 <cloudhub2Deployment>
                    		    <uri>https://anypoint.mulesoft.com</uri>
