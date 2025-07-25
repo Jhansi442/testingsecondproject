@@ -47,26 +47,28 @@
 				 </execution>
 				</executions>
 				<configuration>
-			       <connectedApp>
- 					 <clientId>${clientId}</clientId>
-					  <clientSecret>${clientSecret}</clientSecret>
-				   </connectedApp> 
 				 <cloudhub2Deployment>
-                     <uri>https://anypoint.mulesoft.com</uri>
+                   		    <uri>https://anypoint.mulesoft.com</uri>
       				<provider>${provider}</provider>
       					<environment>${environment}</environment>
 	 					 <businessGroup>${businessGroup}</businessGroup>
      					 <target>${target}</target>
 	 					 <applicationName>${project.artifactId}</applicationName>
+					  <clientId>${clientId}</clientId>
+					  <clientSecret>${clientSecret}</clientSecret>
      					 <muleVersion>${app.runtime}</muleVersion>
-    					  <username>${user}</username>
-     				 <password>${pass}</password>
+<!--     					  <username>${user}</username>
+     				 <password>${pass}</password> -->
      				<releaseChannel>${releaseChannel}</releaseChannel>
      				 <replicas>${replicas}</replicas>
      				 <vCores>${vCores}</vCores>
      				 <deploymentSettings>
       				  <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
      				 </deploymentSettings>
+					  <properties>
+                                            <anypoint.platform.client_id>${ap.client_id}</anypoint.platform.client_id>
+                                             <anypoint.platform.client_secret> ${ap.client_secret}</anypoint.platform.client_secret>
+                                             </properties>
     			</cloudhub2Deployment>
 			</configuration>
 			</plugin>
@@ -87,7 +89,14 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
-
+<distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c9b8cd42-f992-42fe-9947-a7abff144a3d/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
 	<repositories>
 		<repository>
 			<id>anypoint-exchange-v3</id>
